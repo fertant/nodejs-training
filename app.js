@@ -1,6 +1,5 @@
 import config from './config/config.json';
-import Product from './models/Product.js';
-import User from './models/User.js';
+import { Product, User } from './models/index';
 
 console.log(config.name);
 let product = new Product();
