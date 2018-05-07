@@ -1,24 +1,17 @@
 import fs from 'fs';
 import path from 'path';
 import events from 'events';
-import async from 'async';
 
 class ChangeEmitter extends events.EventEmitter {};
 
+var сhangeEmitter = new ChangeEmitter();
+
 class DirWatcher {
   
-  emitter;
-  
-  constructor() {
-    this.emitter = new ChangeEmitter();
-    console.log('Init emitter');
-  }
-    
   watch(dir, delay) {
     var results = [];
     results = this.walk(dir, results, true);
     setInterval(this.walk, delay, dir, results, false);
-    this.emitter.on('dirwatcher:changed', function(file) { console.log('Event ' + file); });
   }
 
   walk(dir, results, first) {
@@ -39,8 +32,7 @@ class DirWatcher {
             if (!results.includes(file)){
               results.push(file);
               if (!first) {
-                console.log('new file ' + file);
-                this.emitter.emit('dirwatcher:changed', file);
+                сhangeEmitter.emit('dirwatcher:changed', dir + '/' + file);
               }
             }
             current.push(file);
@@ -55,4 +47,5 @@ class DirWatcher {
   }
 }
 
-module.exports = new DirWatcher();
+module.exports.dirwatcher = new DirWatcher();
+module.exports.emitter = сhangeEmitter;
