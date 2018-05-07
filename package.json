@@ -12,11 +12,13 @@
   "email": "Andrii_Shutov@epam.com",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
+    "fs": "0.0.1-security",
     "nodemon": "^1.17.3"
   }
 }
