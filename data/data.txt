@@ -1,0 +1,5 @@
+All streams are instances of EventEmitter. They emit events that can be used to read and write data. However, we can consume streams data in a simpler way using the pipe method.
+
+So this is one of the things that make streams in Node.js so awesome. Its like considering scenario where loading of a file from the file system and streaming it to client.
+ It can be done by using core module of node.js for file reading and writing known as fs module .
+ Mainly used for providing utility functions to create readable and writable streams from a file.

@@ -9,3 +9,14 @@
 
 - read directory for new file and emit event
 - react on event and read file data async and sync
+
+## HW 3
+
+- create console application with action parameters:
+    reverse
+    transform
+    outputFile
+    convertFromFile
+    convertToFile
+    cssBundle
+- work with file streams - implements all above actions
