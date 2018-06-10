@@ -20,3 +20,8 @@
     convertToFile
     cssBundle
 - work with file streams - implements all above actions
+
+## HW 4
+
+- create simple text, echo and html/json servers:
+- create express app structure for future use
