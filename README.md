@@ -25,3 +25,9 @@
 
 - create simple text, echo and html/json servers:
 - create express app structure for future use
+
+## HW 5
+
+- User login with token generation
+- Token verification
+- User authentication
