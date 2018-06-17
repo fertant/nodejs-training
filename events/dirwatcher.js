@@ -37,7 +37,7 @@ class DirWatcher {
             }
             current.push(file);
           }
-          if(!--pending) {
+          if (!--pending) {
             return results;
           }
         });
