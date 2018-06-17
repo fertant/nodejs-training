@@ -17,8 +17,11 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
     "csv-parse": "^2.4.0",
     "csvjson": "^5.0.0",
+    "express": "^4.16.3",
     "minimist": "^1.2.0",
     "nodemon": "^1.17.3",
     "through2": "^2.0.3"
