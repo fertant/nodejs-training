@@ -31,3 +31,12 @@
 - User login with token generation
 - Token verification
 - User authentication
+
+## HW 6
+
+- create postgres container and start DB
+docker network create --driver bridge postgres-network
+docker run --name postgres-app --network postgres-network -e POSTGRES_PASSWORD=postgres -d postgres
+docker run -it --rm --network postgres-network postgres /bin/bash
+docker run -it --rm --network postgres-network postgres psql -h postgres-app -U postgres
+

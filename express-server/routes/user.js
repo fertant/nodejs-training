@@ -38,7 +38,16 @@ passport.use(new LocalStrategy({
 ));
 
 userRoutes.get('/api/users', TokenVerifyService.verifyAndDecodeToken, function(req, res) {
-    res.json({action: 'Return ALL users'});
+    let filePath = path.resolve('./express-server/config/creds.txt');
+    let readFileAsync = promisify(fs.readFile);
+    readFileAsync(filePath, { encoding : 'utf8'})
+        .then((content) => {
+            creds = JSON.parse(content);
+            res.json({users: creds});
+        })
+        .catch((error) => {
+            errors.sendResponseError(res, error);
+        });
 });
 
 userRoutes.post('/auth', passport.authenticate('local', { session: false }), function(req, res) {
