@@ -73,7 +73,6 @@ productRoutes.post('/api/products', TokenVerifyService.verifyAndDecodeToken, fun
             errors.sendResponseError(res, error);
         });
 
-//    res.json({action: 'Add NEW product and return it'});
 });
 
 module.exports = productRoutes;

@@ -53,7 +53,6 @@ userRoutes.get('/api/users', TokenVerifyService.verifyAndDecodeToken, function(r
 userRoutes.post('/auth', function(req, res) {
     let params = req.body;
     let readFileAsync = promisify(fs.readFile);
-    let writeFileAsync = promisify(fs.writeFile);
     let filePath = path.resolve('./express-server/config/creds.txt');
     let userCred = null;
     readFileAsync(filePath, { encoding : 'utf8'})
