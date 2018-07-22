@@ -1,0 +1,1 @@
+[{"email":"andrii_shutov@epam.com","password":"password","uuid":"806030d0-719a-11e8-8091-9faa59bb8a30"},{"email":"shutovandrii@epam.com","password":"password","uuid":"ac063e40-719b-11e8-9245-1f071046a81a"}]
