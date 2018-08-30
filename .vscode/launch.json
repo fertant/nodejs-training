@@ -10,6 +10,7 @@
             "request": "launch",
             "name": "Mocha All",
             "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "runtimeExecutable": "${workspaceRoot}/node.sh",
             "args": [
                 "--timeout",
                 "999999",
@@ -24,6 +25,7 @@
             "request": "launch",
             "name": "Mocha Current File",
             "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+            "runtimeExecutable": "${workspaceRoot}/node.sh",
             "args": [
                 "--timeout",
                 "999999",
@@ -37,7 +39,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/express-server/index.js"
+            "program": "${workspaceFolder}/express-server/index.js",
+            "runtimeExecutable": "${workspaceRoot}/node.sh"
         }
     ]
 }

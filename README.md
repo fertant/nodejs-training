@@ -31,3 +31,15 @@
 - User login with token generation
 - Token verification
 - User authentication
+
+## HW 6
+
+- create postgres container and start DB
+docker network create --driver bridge postgres-network
+docker run --name postgres-app --network postgres-network -p 5432:5432 -e POSTGRES_PASSWORD=postgres -d postgres
+docker run -it --rm --network postgres-network postgres /bin/bash
+docker run -it --rm --network postgres-network postgres psql -h postgres-app -U postgres
+- create db models and migrate database
+sequelize model:generate --name User --attributes uuid:string,email:string,password:string
+sequelize db:migrate --url 'postgres://postgres:postgres@localhost/models'
+- prepare quesries to DB for Product
