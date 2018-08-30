@@ -43,3 +43,15 @@ docker run -it --rm --network postgres-network postgres psql -h postgres-app -U 
 sequelize model:generate --name User --attributes uuid:string,email:string,password:string
 sequelize db:migrate --url 'postgres://postgres:postgres@localhost/models'
 - prepare quesries to DB for Product
+
+## HW 7
+
+- start mongoDB container
+docker run --name mongo-app --restart=always -d -p 27017:27017 mongo mongod --auth
+docker exec -i -t mongo-app /bin/bash
+mongo
+db.createUser({user:"admin",pwd:"admin",roles:[{role:"root",db:"admin"}]});
+use mongodb
+db.createCollection('cities');
+db.adminCommand({listDatabases:1});
+- create crud operation in mongodb
