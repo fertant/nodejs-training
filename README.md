@@ -54,4 +54,8 @@ db.createUser({user:"admin",pwd:"admin",roles:[{role:"root",db:"admin"}]});
 use mongodb
 db.createCollection('cities');
 db.adminCommand({listDatabases:1});
-- create crud operation in mongodb
+- create crud operation in mongodb for cities entity
+
+## HW 8
+
+- swagger docs

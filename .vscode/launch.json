@@ -39,7 +39,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/express-server/index.js",
+            "program": "${workspaceFolder}/express-swagger/index.js",
             "runtimeExecutable": "${workspaceRoot}/node.sh"
         }
     ]
